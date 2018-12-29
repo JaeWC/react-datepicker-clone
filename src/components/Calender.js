@@ -98,6 +98,7 @@ export default class Calender extends Component {
           <li>Sa</li>
         </ul>
         <Day
+          year={this.state.currentYear}
           month={this.state.month}
           date={this.state.date}
           day={this.state.day}

@@ -21,6 +21,23 @@ export default class Day extends Component {
     this.setState({
       picked: val
     });
+
+    let findDay = (val - this.props.date) % 7;
+    let day;
+    findDay < 0 ? (day = findDay + 7) : (day = (this.props.day + findDay) % 7);
+
+    const days = [
+      '일요일',
+      '월요일',
+      '화요일',
+      '수요일',
+      '목요일',
+      '금요일',
+      '토요일'
+    ];
+    console.log(
+      `${this.props.year}년 ${this.props.month + 1}월 ${val}일 ${days[day]}`
+    );
   };
 
   render() {
